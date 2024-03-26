@@ -1,14 +1,33 @@
 import { useState } from "react";
 
-const AddPetForm = () => {
+const AddPetForm = ({postPet}) => {
     const [name, setName] = useState("");
     const [type, setType] = useState("");
     const [breed, setBreed] = useState("");
     const [age, setAge] = useState(0);
+
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+
+        const petDTO = {
+            name,
+            type,
+            breed,
+            age
+        }
+
+        postPet(petDTO);
+
+        setName("");
+        setType("");
+        setBreed("");
+        setAge(0);
+
+    }
     return ( 
         <>
         <h3>Add pet:</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
             type="text"
             placeholder="Pet Name"
