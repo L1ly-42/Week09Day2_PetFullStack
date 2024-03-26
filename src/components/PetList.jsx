@@ -1,13 +1,18 @@
 import Pet from "./Pet";
 
-const PetList = () => {
+const PetList = ({pets}) => {
+
+    const petComponents = pets.map((pet) => {
+        return <Pet key={pet.id} pet={pet} />
+    })
+
+
     return ( 
         <>
-        <h2>Hi from Pet List</h2>
+        <h2>All Pets:</h2>
         <section className="petComponents">
-            <Pet/>
-            <Pet/>
-            <Pet/>
+            {petComponents}
+          
 
         </section>
 

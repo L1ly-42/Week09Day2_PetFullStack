@@ -24,7 +24,7 @@ const PetContainer = () => {
         <AddPetForm />
         </header>
         <main>
-            <PetList/>
+            <PetList pets={pets}/>
         </main>
 
        
