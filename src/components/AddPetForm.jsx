@@ -14,16 +14,17 @@ const AddPetForm = ({postPet}) => {
             type,
             breed,
             age
-        }
+        };
 
         postPet(petDTO);
 
-        setName("");
-        setType("");
-        setBreed("");
-        setAge(0);
+       setName("");
+       setType("");
+       setBreed("");
+       setAge(0);
+    };
 
-    }
+    
     return ( 
         <>
         <h3>Add pet:</h3>

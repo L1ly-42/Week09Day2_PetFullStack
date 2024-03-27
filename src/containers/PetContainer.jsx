@@ -30,6 +30,17 @@ const PetContainer = () => {
         setPets([...pets, savedPet])
     }
 
+    //Fetch DELETE request
+    const deletePet = async (petId) =>{
+        const response = await fetch("http://localhost:8080/pets/" + petId, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"},
+        });
+        setPets(pets.filter(pet => pet.id != petId));
+    }
+
+
+
 
     return ( 
         <>
@@ -38,7 +49,7 @@ const PetContainer = () => {
         <AddPetForm postPet={postPet}/>
         </header>
         <main>
-            <PetList pets={pets}/>
+            <PetList pets={pets} deletePet={deletePet}/>
         </main>
 
        
