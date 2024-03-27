@@ -46,10 +46,12 @@ const PetContainer = () => {
         <>
         <header>
         <h1>My Pets</h1>
-        <AddPetForm postPet={postPet}/>
+        <AddPetForm className="AddPetForm" postPet={postPet}/>
         </header>
         <main>
+        <section className="petList">
             <PetList pets={pets} deletePet={deletePet}/>
+        </section>
         </main>
 
        

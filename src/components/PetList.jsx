@@ -10,13 +10,7 @@ const PetList = ({pets, deletePet}) => {
     return ( 
         <>
         <h2>All Pets:</h2>
-        <section className="petComponents">
             {petComponents}
-          
-
-        </section>
-
-
         </>
      );
 }

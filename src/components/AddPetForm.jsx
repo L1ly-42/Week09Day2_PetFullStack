@@ -27,8 +27,8 @@ const AddPetForm = ({postPet}) => {
 
     return ( 
         <>
-        <h4>Add pet:</h4>
-        <form onSubmit={handleSubmit}>
+        <h3>Add pet:</h3>
+        <form className="form" onSubmit={handleSubmit}>
             <input 
             type="text"
             placeholder="Pet Name"
@@ -62,7 +62,7 @@ const AddPetForm = ({postPet}) => {
             onChange={(e)=> setAge(e.target.value)} 
              />
 
-             <input type="Submit" value="Submit"/>
+             <input className="submitButton" type="Submit" value="Submit"/>
 
         </form>
        
