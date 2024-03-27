@@ -24,20 +24,22 @@ const AddPetForm = ({postPet}) => {
        setAge(0);
     };
 
-    
+
     return ( 
         <>
-        <h3>Add pet:</h3>
+        <h4>Add pet:</h4>
         <form onSubmit={handleSubmit}>
             <input 
             type="text"
             placeholder="Pet Name"
+            required
             value={name}
             onChange={(e)=> setName(e.target.value)} />
 
             <input 
             type="text"
             placeholder="Type of Animal"
+            required
             value={type}
             onChange={(e)=> setType(e.target.value)} 
             />
@@ -45,6 +47,7 @@ const AddPetForm = ({postPet}) => {
             <input 
             type="text"
             placeholder="Breed"
+            required
             value={breed}
             onChange={(e)=> setBreed(e.target.value)} 
              />
@@ -54,6 +57,7 @@ const AddPetForm = ({postPet}) => {
              min={0} 
              max={600}
              placeholder="Age"
+             required
              value={age}
             onChange={(e)=> setAge(e.target.value)} 
              />
